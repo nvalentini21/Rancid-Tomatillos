@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Movies from './Movies';
+import Nav from './Nav';
 import './App.css';
 
 class App extends Component {
