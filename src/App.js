@@ -17,6 +17,8 @@ class App extends Component {
     return (
       <main className='App'>
         <nav>RANCID TOMATILLOS NAV</nav> //component Nav will be here
+        <h2>All movies</h2>
+        <Movies movies={this.state.movies}/>
       </main>
     )
   }
