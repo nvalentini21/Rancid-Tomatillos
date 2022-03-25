@@ -3,5 +3,18 @@
   background-color: #1A085E;
   color: white;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: red;
+  margin-right: 30px;
+  margin: 20px;
+}
+
+.all-movies-btn {
+  background-color: #1A085E;
+  height: 50px;
+  width: 200px;
+  color: white;
 }

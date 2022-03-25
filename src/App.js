@@ -21,10 +21,14 @@ setSingleMovie = (id) => {
   console.log(this.state.singleMovie)
 }
 
+showAllMovies = () => {
+  this.setState({singleMovie: ''})
+}
+
   render() {
     return (
       <main className='App'>
-        <Nav/>
+        <Nav showAllMovies={this.showAllMovies}/>
         {this.state.singleMovie ? <Movie movie={this.state.singleMovie}/> :
         <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
       </main>
