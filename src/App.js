@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Movies from './Movies';
+import Movie from './Movie';
 import Nav from './Nav';
 import movieData from './data';
 import './App.css';
@@ -8,9 +9,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: movieData.movies
+      movies: movieData.movies,
+      singleMovie: ''
     }
   }
+
+showSingleMovie = () => {
+
+}
 
   render() {
     console.log(this.state.movies)
@@ -19,6 +25,7 @@ class App extends Component {
         <nav>RANCID TOMATILLOS NAV</nav> //component Nav will be here
         <h2>All movies</h2>
         <Movies movies={this.state.movies}/>
+        <Movie movie={this.state.movie}/>
       </main>
     )
   }
