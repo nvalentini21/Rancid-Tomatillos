@@ -5,3 +5,9 @@
   grid-gap: 20px;
   background-color: black;
 }
+
+.movies-display {
+  margin-top: 50px;
+  background-color: black;
+  color: white;
+}

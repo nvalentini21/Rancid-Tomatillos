@@ -1,0 +1,7 @@
+.navigation {
+  height: 40%;
+  background-color: #1A085E;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}

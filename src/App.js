@@ -10,22 +10,23 @@ class App extends Component {
     super();
     this.state = {
       movies: movieData.movies,
-      singleMovie: ''
+      singleMovie:'',
     }
   }
 
-showSingleMovie = () => {
 
+setSingleMovie = (id) => {
+  const singleMovie2 = this.state.movies.find(movie => movie.id === id)
+  this.setState({singleMovie: singleMovie2})
+  console.log(this.state.singleMovie)
 }
 
   render() {
-    console.log(this.state.movies)
     return (
       <main className='App'>
-        <nav>RANCID TOMATILLOS NAV</nav> //component Nav will be here
-        <h2>All movies</h2>
-        <Movies movies={this.state.movies}/>
-        <Movie movie={this.state.movie}/>
+        <Nav/>
+        {this.state.singleMovie ? <Movie movie={this.state.singleMovie}/> :
+        <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
       </main>
     )
   }
