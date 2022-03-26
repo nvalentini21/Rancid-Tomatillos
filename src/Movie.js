@@ -9,7 +9,9 @@ const genres = movie.genres.join(', ')
 const rating = movie.average_rating.toFixed(2)
 
   return (
-    <div className='single-movie'>
+    <div className='single-movie' style={{
+    backgroundImage: `url(${movie.backdrop_path})`
+  }}>
       <div className='poster-div'>
         <h1>{movie.title}</h1>
         <p>Runtime: {movie.runtime} minutes </p>
