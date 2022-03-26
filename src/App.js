@@ -9,11 +9,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: movieData.movies,
+      movies:[],
       singleMovie:'',
+      error: '',
     }
   }
 
+componentDidMount = () => {
+  fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+    .then(response => response.json())
+    .then(data => {
+      this.setState({movies: data.movies})
+    })
+  }
 
 setSingleMovie = (id) => {
   const singleMovie2 = this.state.movies.find(movie => movie.id === id)
