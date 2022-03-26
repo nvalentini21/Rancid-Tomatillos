@@ -1,6 +1,7 @@
 
 .App {
-  /* text-align: center; */
+  width: fit-content;
   background-color: black;
   color: white;
+  overflow-x: inherit;
 }
