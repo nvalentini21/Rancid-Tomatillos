@@ -3,6 +3,7 @@ import Movies from './Movies';
 import Movie from './Movie';
 import Nav from './Nav';
 import movieData from './data';
+import fetchCalls from './apiCalls'
 import './App.css';
 
 class App extends Component {
@@ -16,8 +17,7 @@ class App extends Component {
   }
 
 componentDidMount = () => {
-  fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-    .then(response => response.json())
+  fetchCalls.fetchData('movies')
     .then(data => {
       this.setState({movies: data.movies})
     })
