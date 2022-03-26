@@ -1,13 +1,27 @@
 .single-movie{
-  height: 100vw;
   display:flex;
   justify-content: center;
+  align-items: flex-start;
   background-color: black;
+  background-image: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.description-div{
+.description-div, .poster-div{
   padding: 40px;
   width: 50%;
-  height: 50%;
+  height: 100vw;
   align-items: center;
+  background: black;
+  opacity: 0.8;
+}
+
+.poster-div{
+  padding-left: 200px;
+}
+
+.description-div {
+  padding-top: 100px;
+  padding-right: 200px;
 }
