@@ -11,26 +11,44 @@ class App extends Component {
     super();
     this.state = {
       movies:[],
+      singleMovieId:'',
       singleMovie:'',
       error: '',
     }
   }
 
 componentDidMount = () => {
+  console.log('MOUNT')
   fetchCalls.fetchData('movies')
     .then(data => {
       this.setState({movies: data.movies})
     })
+    if (this.state.singleMovieId && !this.state.singleMovie) {
+      fetchCalls.fetchData(`movies/${this.state.singleMovieId}`)
+      .then(data => {
+        this.setState({singleMovie: data.movie})
+      })
+    }
+  }
+
+  componentDidUpdate = () => {
+    console.log('update')
+    if (this.state.singleMovieId && !this.state.singleMovie) {
+      fetchCalls.fetchData(`movies/${this.state.singleMovieId}`)
+      .then(data => {
+        this.setState({singleMovie: data.movie})
+      })
+    }
   }
 
 setSingleMovie = (id) => {
   const singleMovie2 = this.state.movies.find(movie => movie.id === id)
-  this.setState({singleMovie: singleMovie2})
-  console.log(this.state.singleMovie)
+  this.setState({singleMovieId: singleMovie2.id})
 }
 
 showAllMovies = () => {
   this.setState({singleMovie: ''})
+  this.setState({singleMovieId: ''})
 }
 
   render() {
