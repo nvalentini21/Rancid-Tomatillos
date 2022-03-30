@@ -3,10 +3,10 @@ import './Movie.css'
 
 const Movie= ({movie}) => {
 
-const releaseDateObj = new Date(movie.release_date)
-const releaseDate = (releaseDateObj.toString().split(' ').slice(1, 4).join(' '))
-const genres = movie.genres.join(', ')
-const rating = movie.average_rating.toFixed(2)
+  const releaseDateObj = new Date(movie.release_date)
+  const releaseDate = (releaseDateObj.toString().split(' ').slice(1, 4).join(' '))
+  const genres = movie.genres.join(', ')
+  const rating = movie.average_rating.toFixed(2)
 
   return (
     <div className='single-movie' style={{
