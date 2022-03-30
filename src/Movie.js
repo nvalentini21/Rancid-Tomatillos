@@ -21,12 +21,23 @@ componentDidMount = () => {
 
   renderReleaseDate = () => {
     const releaseDateObj =  new Date(this.state.singleMovie.release_date)
-    const releaseDate = (releaseDateObj.toString().split(' ').slice(1, 4).join(' '))
+    const releaseDate = releaseDateObj.toString().split(' ').slice(1, 4).join(' ')
     return releaseDate
   }
 
-  // const genres = movie.genres.join(', ')
-  // const rating = movie.average_rating.toFixed(2)
+  renderGenres = () => {
+    if (this.state.singleMovie.genres) {
+      const genres = this.state.singleMovie.genres.join(', ')
+      return genres
+    }
+  }
+
+  renderRating = () => {
+    if (this.state.singleMovie.average_rating){
+      const rating = this.state.singleMovie.average_rating.toFixed(2)
+      return rating
+    }
+  }
 
   render() {
     return (
@@ -40,10 +51,10 @@ componentDidMount = () => {
           <img src={this.state.singleMovie.poster_path} alt="Movie poster" width="95%" height="auto"/>
         </div>
         <div className='description-div'>
-          <h3>Genres:</h3>
+          <h3>Genres: {this.renderGenres()}</h3>
           <h4>Overview:</h4>
           <p>{this.state.singleMovie.overview}</p>
-          <p>Average Rating:</p>
+          <p>Average Rating: {this.renderRating()} / 10</p>
         </div>
       </div>
     )
