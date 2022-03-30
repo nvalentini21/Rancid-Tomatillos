@@ -18,9 +18,13 @@ componentDidMount = () => {
     this.setState({singleMovie: data.movie})
   })
   }
-  //
-  // releaseDateObj = () = {} new Date(movie.release_date)
-  // const releaseDate = (releaseDateObj.toString().split(' ').slice(1, 4).join(' '))
+
+  renderReleaseDate = () => {
+    const releaseDateObj =  new Date(this.state.singleMovie.release_date)
+    const releaseDate = (releaseDateObj.toString().split(' ').slice(1, 4).join(' '))
+    return releaseDate
+  }
+
   // const genres = movie.genres.join(', ')
   // const rating = movie.average_rating.toFixed(2)
 
@@ -32,7 +36,7 @@ componentDidMount = () => {
         <div className='poster-div'>
           <h1>{this.state.singleMovie.title}</h1>
           <p>Runtime: {this.state.singleMovie.runtime} minutes </p>
-          <p>Date Released:</p>
+          <p>Date Released: {this.renderReleaseDate()}</p>
           <img src={this.state.singleMovie.poster_path} alt="Movie poster" width="95%" height="auto"/>
         </div>
         <div className='description-div'>
