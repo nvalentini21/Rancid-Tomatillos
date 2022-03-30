@@ -12,12 +12,11 @@ class Movie extends Component {
   }
 
 componentDidMount = () => {
-  console.log('MOVIEMOUNT')
   fetchCalls.fetchData(`movies/${this.state.movieID}`)
   .then(data => {
     this.setState({singleMovie: data.movie})
   })
-  }
+}
 
   renderReleaseDate = () => {
     const releaseDateObj =  new Date(this.state.singleMovie.release_date)
@@ -34,8 +33,30 @@ componentDidMount = () => {
 
   renderRating = () => {
     if (this.state.singleMovie.average_rating){
-      const rating = this.state.singleMovie.average_rating.toFixed(2)
+      const rating = this.state.singleMovie.average_rating.toFixed(1)
       return rating
+    }
+  }
+
+  renderRevenue = () => {
+    if (this.state.singleMovie.revenue && this.state.singleMovie.revenue > 0){
+      return `$ ${this.state.singleMovie.revenue.toString()}`
+    } else {
+      return `Not available.`
+    }
+  }
+
+  renderBudget = () => {
+    if (this.state.singleMovie.budget && this.state.singleMovie.budget > 0){
+      return `$ ${this.state.singleMovie.budget.toString()}`
+    } else {
+      return `Not available.`
+    }
+  }
+
+  renderTagline = () => {
+    if (this.state.singleMovie.tagline){
+      return this.state.singleMovie.tagline
     }
   }
 
@@ -54,13 +75,14 @@ componentDidMount = () => {
           <h3>Genres: {this.renderGenres()}</h3>
           <h4>Overview:</h4>
           <p>{this.state.singleMovie.overview}</p>
-          <p>Average Rating: {this.renderRating()} / 10</p>
+          <p className="average-rating">Average Rating: {this.renderRating()} / 10</p>
+          <p className="revenue">Revenue: {this.renderRevenue()}</p>
+          <p className="budget"> Budget: {this.renderBudget()}</p>
+          <p className="tagline">{this.renderTagline()}</p>
         </div>
       </div>
     )
   }
 }
-
-
 
 export default Movie;

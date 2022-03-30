@@ -19,7 +19,6 @@ class App extends Component {
   }
 
 componentDidMount = () => {
-  console.log("MOUNT")
   fetchCalls.fetchData('movies')
     .then(data => {
       this.setState({movies: data.movies})
