@@ -12,9 +12,6 @@ class App extends Component {
     super();
     this.state = {
       movies:[],
-      singleMovieId:'',
-      singleMovie:'',
-      error: '',
     }
   }
 

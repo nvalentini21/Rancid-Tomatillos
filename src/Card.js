@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css'
 import { Route, NavLink} from 'react-router-dom';
 
-const Card = ({poster, backdrop, rating, release_date, title, id, setSingleMovie}) => {
+const Card = ({poster, id}) => {
   return (
     <NavLink to={`movies/${id}`}>
     <div className='movie-card'>
