@@ -6,7 +6,7 @@ const Card = ({poster, id}) => {
   return (
     <NavLink to={`movies/${id}`}>
     <div className='movie-card'>
-      <img src={poster} alt="Movie poster" width="200"/>
+      <img src={poster} alt="Movie poster" width="100%"/>
     </div>
     </NavLink>
   )
