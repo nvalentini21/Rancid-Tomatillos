@@ -69,7 +69,7 @@ componentDidMount = () => {
           <h1>{this.state.singleMovie.title}</h1>
           <p>Runtime: {this.state.singleMovie.runtime} minutes </p>
           <p>Date Released: {this.renderReleaseDate()}</p>
-          <img src={this.state.singleMovie.poster_path} alt="Movie poster" width="250px" height="auto" position="fixed"/>
+          <img src={this.state.singleMovie.poster_path} alt="Movie poster" width="275px" height="auto" position="fixed"/>
         </div>
         <div className='description-div'>
           <h3>Genres: {this.renderGenres()}</h3>

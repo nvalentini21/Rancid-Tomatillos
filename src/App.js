@@ -33,7 +33,10 @@ componentDidMount = () => {
           render={({match}) => <Movie id={match.params.id} />
         }
         />
-        <section className="footer"></section>
+        <section className="footer">
+        <p>Site created by: Nicole Valentini</p>
+        <p>Turing School of Software and Design 2022</p>
+        </section>
       </main>
     )
   }
