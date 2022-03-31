@@ -5,7 +5,7 @@ import Nav from './Nav';
 import movieData from './data';
 import fetchCalls from './apiCalls'
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -25,14 +25,20 @@ componentDidMount = () => {
   render() {
     return (
       <main className='App'>
-        <Nav showAllMovies={this.showAllMovies}/>
-        <Route exact path="/"
-          render={() => <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
+        <Route path="/"
+          render={() => <Nav showAllMovies={this.showAllMovies}/>}
         />
-        <Route exact path="/movies/:id"
-          render={({match}) => <Movie id={match.params.id} />
-        }
-        />
+        <Switch>
+          <Route exact path="/"
+            render={() => <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
+          />
+          <Route exact path="/movies/:id"
+            render={({match}) => <Movie id={match.params.id} />}
+          />
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
         <section className="footer">
         <p>Site created by: Nicole Valentini</p>
         <p>Turing School of Software and Design 2022</p>
