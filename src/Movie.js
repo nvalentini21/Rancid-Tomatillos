@@ -40,7 +40,7 @@ componentDidMount = () => {
 
   renderRevenue = () => {
     if (this.state.singleMovie.revenue && this.state.singleMovie.revenue > 0){
-      return `$ ${this.state.singleMovie.revenue.toString()}`
+      return `$ ${this.state.singleMovie.revenue.toString()}.00`
     } else {
       return `Not available.`
     }
@@ -48,7 +48,7 @@ componentDidMount = () => {
 
   renderBudget = () => {
     if (this.state.singleMovie.budget && this.state.singleMovie.budget > 0){
-      return `$ ${this.state.singleMovie.budget.toString()}`
+      return `$ ${this.state.singleMovie.budget.toString()}.00`
     } else {
       return `Not available.`
     }

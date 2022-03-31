@@ -1,7 +1,15 @@
 
 .App {
   background-color: black;
+  height: 100vw;
   color: white;
   overflow-x: inherit;
   width: 100vw;
+}
+
+.footer {
+  height: 75px;
+  width: 100vw;
+  background: linear-gradient(90deg, rgba(5,2,56,1) 0%, rgba(136,0,255,1) 49%, rgba(24,9,121,1) 78%);
+
 }

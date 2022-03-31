@@ -33,6 +33,7 @@ componentDidMount = () => {
           render={({match}) => <Movie id={match.params.id} />
         }
         />
+        <section className="footer"></section>
       </main>
     )
   }
