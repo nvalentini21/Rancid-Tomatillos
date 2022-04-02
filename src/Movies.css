@@ -4,11 +4,12 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   background-color: black;
+  overflow-x: scroll;
 }
 
 .movies-display {
-  width: 100%;
   margin-top: 50px;
   background-color: black;
   color: white;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
 }

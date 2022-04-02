@@ -13,7 +13,6 @@ const Movies = ({movies, setSingleMovie}) => {
         rating={movie.average_rating}
         release_date={movie.release_date}
         title={movie.title}
-        setSingleMovie={setSingleMovie}
       />
     )
   })

@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 import Movies from './Movies';
 import Movie from './Movie';
 import Nav from './Nav';
+import NoMatch from './NoMatch';
 import movieData from './data';
 import fetchCalls from './apiCalls'
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       movies:[],
-      singleMovieId:'',
-      singleMovie:'',
-      error: '',
     }
   }
 
@@ -25,35 +23,27 @@ componentDidMount = () => {
     })
   }
 
-  componentDidUpdate = () => {
-    console.log('update')
-    if (this.state.singleMovieId && !this.state.singleMovie) {
-      fetchCalls.fetchData(`movies/${this.state.singleMovieId}`)
-      .then(data => {
-        this.setState({singleMovie: data.movie})
-      })
-    }
-  }
-
-setSingleMovie = (id) => {
-  const singleMovie2 = this.state.movies.find(movie => movie.id === id)
-  this.setState({singleMovieId: singleMovie2.id})
-}
-
-// showAllMovies = () => {
-//   this.setState({singleMovie: ''})
-//   this.setState({singleMovieId: ''})
-// }
-
   render() {
     return (
       <main className='App'>
-        <Nav showAllMovies={this.showAllMovies}/>
-        <Route exact path="/"
-          render={() => <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
+        <Route path="/"
+          render={() => <Nav showAllMovies={this.showAllMovies}/>}
         />
-        {this.state.singleMovie ? <Movie movie={this.state.singleMovie}/> :
-        <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
+        <Switch>
+          <Route exact path="/"
+            render={() => <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
+          />
+          <Route exact path="/movies/:id"
+            render={({match}) => <Movie id={match.params.id} />}
+          />
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
+        <section className="footer">
+        <p>Site created by: Nicole Valentini</p>
+        <p>Turing School of Software and Design 2022</p>
+        </section>
       </main>
     )
   }
