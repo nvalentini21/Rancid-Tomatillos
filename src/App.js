@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Movies from './Movies';
 import Movie from './Movie';
 import Nav from './Nav';
+import NoMatch from './NoMatch';
 import movieData from './data';
 import fetchCalls from './apiCalls'
 import './App.css';
