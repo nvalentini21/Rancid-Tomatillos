@@ -3,6 +3,7 @@ import Movies from './Movies';
 import Movie from './Movie';
 import Nav from './Nav';
 import NoMatch from './NoMatch';
+import Search from './Search';
 import movieData from './data';
 import fetchCalls from './apiCalls'
 import './App.css';
@@ -35,6 +36,9 @@ componentDidMount = () => {
           />
           <Route exact path="/movies/:id"
             render={({match}) => <Movie id={match.params.id} />}
+          />
+          <Route exact path="/search"
+            render={() => <Search allMovies={this.state.movies} />}
           />
           <Route>
             <NoMatch />

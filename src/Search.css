@@ -1,0 +1,7 @@
+.search-page {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  height: 100vw;
+  color: white;
+}
