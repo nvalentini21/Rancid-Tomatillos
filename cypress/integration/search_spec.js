@@ -29,13 +29,13 @@ describe('Search Page', () => {
       .url().should('include', '/search')
       .get('.movie-card').eq(0).should('be.visible')
   });
-//
+
   it('Should be able to click a movie after searching and see that movie\'s details', () => {
     cy.get('input[type="text"]').type('money plane')
       .get('.movie-card').eq(0).click()
       .url().should('include', '/movies/694919')
   });
-//
+
   it('Should display an error page if the user visits a non-existant URL', () => {
     cy.visit('http://localhost:3000/incorrectURL')
       .get('h1')
