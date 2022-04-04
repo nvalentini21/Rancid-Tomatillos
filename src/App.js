@@ -32,7 +32,7 @@ componentDidMount = () => {
         />
         <Switch>
           <Route exact path="/"
-            render={() => <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
+            render={() => <Movies movies={this.state.movies}/> }
           />
           <Route exact path="/movies/:id"
             render={({match}) => <Movie id={match.params.id} />}

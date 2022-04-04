@@ -44,10 +44,6 @@ class Search extends Component {
          id={movie.id}
          key={movie.id}
          poster={movie.poster_path}
-         backdrop={movie.backdrop_path}
-         rating={movie.average_rating}
-         release_date={movie.release_date}
-         title={movie.title}
        />
      )
    })
