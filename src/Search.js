@@ -51,7 +51,7 @@ handleChange = event => {
     return (
       <div className="search-page">
         <form className="search-form">
-          <label> Enter Title: </label>
+          <label> Begin typing to filter: </label>
           <input
             type='text'
             placeholder='enter movie'
@@ -59,7 +59,6 @@ handleChange = event => {
             value={this.state.search}
             onChange={event => this.handleChange(event)}
           />
-        <button onSubmit={event => this.searchMovie(event)}>Search</button>
         </form>
         {this.state.movieCards &&
           <div className = 'movies-display'>
