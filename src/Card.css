@@ -5,3 +5,7 @@
 .movie-card:hover {
   transform: scale(1.5);
 }
+
+img {
+  border-radius: 10px;
+}
