@@ -10,7 +10,7 @@ class Search extends Component {
       allMovies: [],
       filteredMovies:[],
       movieCards: null,
-      search: ''
+      search: '',
     }
   }
 
@@ -19,21 +19,21 @@ class Search extends Component {
       .then(data => {
         this.setState({allMovies: data.movies})
       })
-    }
+  }
 
-handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
-}
+  handleChange = event => {
+      this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
+  }
 
- clearInputs = () => {
-   this.setState({search:''})
- }
+  clearInputs = event => {
+       this.setState({search:''})
+  }
 
- searchMovie = event => {
-   event.preventDefault()
-   const searchedMovies = this.state.allMovies.filter(movie => {
-     return movie.title.toLowerCase().includes(this.state.search.toLowerCase())
-   })
+  searchMovie = event => {
+    event.preventDefault()
+    const searchedMovies = this.state.allMovies.filter(movie => {
+      return movie.title.toLowerCase().includes(this.state.search.toLowerCase())
+  })
    this.setState({filteredMovies:searchedMovies}, this.getMovieCards)
  }
 
@@ -55,9 +55,9 @@ handleChange = event => {
  }
 
   render() {
-    console.log(this.state.movieCards)
     return (
       <div className="search-page">
+        {this.state.error && <div>{this.state.error}</div>}
         <form className="search-form">
           <label> Begin typing to filter: </label>
           <input

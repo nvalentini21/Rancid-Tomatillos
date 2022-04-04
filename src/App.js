@@ -38,7 +38,7 @@ componentDidMount = () => {
             render={({match}) => <Movie id={match.params.id} />}
           />
           <Route exact path="/search"
-            render={() => <Search allMovies={this.state.movies} />}
+            render={() => <Search />}
           />
           <Route>
             <NoMatch />
