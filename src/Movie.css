@@ -1,4 +1,4 @@
-.single-movie{
+.single-movie {
   display:flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -8,7 +8,8 @@
   background-size: cover;
 }
 
-.description-div, .poster-div{
+.description-div, .poster-div {
+  color: white;
   height: 90vw;
   padding: 40px;
   align-items: flex-start;
@@ -17,13 +18,32 @@
   width: 50%;
 }
 
-.poster-div{
+.poster-div {
   align-self: flex-start;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 225px;
 }
 
 .description-div {
   padding-right: 200px;
   overflow-y: auto;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.average-rating {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tagline {
+  font-weight: bold;
+  font-size: 9px;
+}
+
+.runtime {
+  font-weight: bold;
 }

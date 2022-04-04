@@ -7,6 +7,17 @@
   color: white;
 }
 
+
+.search-form {
+  padding: 30px;
+  margin-top: 50px;
+  display: flex;
+  align-items: stretch;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: gray;
+}
+
 label {
   margin-right: 10px;
 }
@@ -17,21 +28,11 @@ input {
   height: 20px;
 }
 
-.search-form {
-  padding: 30px;
-  margin-top: 20px;
-  display: flex;
-  align-items: stretch;
-  border-top: solid;
-  border-bottom: solid;
-  border-color: gray;
-}
-
 .movies-search-container {
-  padding: 20px;
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 20px;
+  grid-gap: 5px;
   background-color: black;
 }
 

@@ -25,11 +25,11 @@ describe('Single Movie Page', () => {
   });
 
   it('Should be able to visit http://localhost:3000/movies/694919 and render the movie details page', () => {
-      cy.contains('RANCID TOMATILLOS')
-        .get('.all-movies-btn')
-        .contains('All Movies')
-        .get('.search-btn')
-        .contains('Search Movies')
+    cy.contains('RANCID TOMATILLOS')
+      .get('.all-movies-btn')
+      .contains('All Movies')
+      .get('.search-btn')
+      .contains('Search Movies')
   });
 
   it('Should be able to visit http://localhost:3000/movies/694919 and see the movie title, Runtime, and Release date', () => {
@@ -43,21 +43,21 @@ describe('Single Movie Page', () => {
     cy.get('.description-div').contains('Genres: Action')
       .get('.overview-title').contains('Overview')
       .get('.overview-summary').contains(`A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals.`)
-      .get('.average-rating').contains('7.4 / 10')
+      .get('.average-rating').contains('Average Rating: 6.9 / 10')
       .get('.revenue').contains('Not available.')
       .get('.budget').contains('Not available.')
   });
 
   it('Should be directed to the main dashboard when user clicks the All Movies button', () => {
-      cy.get('.all-btn').click()
-        .url().should('include', '/')
-        .get('h1').contains('RANCID TOMATILLOS')
+    cy.get('.all-btn').click()
+      .url().should('include', '/')
+      .get('h1').contains('RANCID TOMATILLOS')
   });
 
   it('Should be directed to the search form page when user clicks the Search button', () => {
-      cy.get('.search-btn').click()
-        .url().should('include', '/search')
-        .get('h1')
-        .contains('404 Error')
+    cy.get('.search-btn').click()
+      .url().should('include', '/search')
+      .get('label')
+      .contains('Begin typing to search')
   });
 });

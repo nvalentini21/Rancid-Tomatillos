@@ -22,11 +22,11 @@ class Search extends Component {
   }
 
   handleChange = event => {
-      this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
+    this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
   }
 
   clearInputs = event => {
-       this.setState({search:''})
+    this.setState({search:''})
   }
 
   searchMovie = event => {
@@ -55,10 +55,10 @@ class Search extends Component {
       <div className="search-page">
         {this.state.error && <div>{this.state.error}</div>}
         <form className="search-form">
-          <label> Begin typing to filter: </label>
+          <label> Begin typing to search: </label>
           <input
             type='text'
-            placeholder='enter movie'
+            placeholder='movie title'
             name='search'
             value={this.state.search}
             onChange={event => this.handleChange(event)}
