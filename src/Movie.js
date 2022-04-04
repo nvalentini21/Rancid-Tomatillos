@@ -70,6 +70,7 @@ componentDidMount = () => {
           <p className='runtime'>Runtime: {this.state.singleMovie.runtime} minutes </p>
           <p className = 'release'>Date Released: {this.renderReleaseDate()}</p>
           <img src={this.state.singleMovie.poster_path} alt="Movie poster" width="275px" height="auto" position="fixed"/>
+          <p className="tagline">{this.renderTagline()}</p>
         </div>
         <div className='description-div'>
           <h3 className='genres'>Genres: {this.renderGenres()}</h3>
@@ -78,7 +79,6 @@ componentDidMount = () => {
           <p className="average-rating">Average Rating: {this.renderRating()} / 10</p>
           <p className="revenue">Revenue: {this.renderRevenue()}</p>
           <p className="budget"> Budget: {this.renderBudget()}</p>
-          <p className="tagline">{this.renderTagline()}</p>
         </div>
       </div>
     )
