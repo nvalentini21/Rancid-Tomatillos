@@ -25,12 +25,23 @@ componentDidUpdate = () => {
 }
 
 handleChange = event => {
-   this.setState({ [event.target.name]: event.target.value });
+   this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
+ }
+
+ clearInputs = (event) => {
+   this.setState({search:''})
+ }
+
+ searchMovie = event => {
+   event.preventDefault()
+   const searchedMovies = this.state.allMovies.filter(movie => {
+     return movie.title.toLowerCase().includes(this.state.search.toLowerCase())
+   })
+   this.setState({filteredMovies:searchedMovies})
+   console.log(this.state.filteredMovies)
  }
 
   render() {
-    console.log(this.state.search)
-    console.log('FILTERED>>>>', this.state.filteredMovies)
     return (
       <div className="search-page">
         <form className="search-form">
@@ -42,7 +53,7 @@ handleChange = event => {
             value={this.state.search}
             onChange={event => this.handleChange(event)}
           />
-        <button>Search</button>
+        <button onSubmit={event => this.searchMovie(event)}>Search</button>
         </form>
       </div>
     )
