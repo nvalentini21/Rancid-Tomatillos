@@ -4,7 +4,6 @@ import Movie from './Movie';
 import Nav from './Nav';
 import NoMatch from './NoMatch';
 import Search from './Search';
-import movieData from './data';
 import fetchCalls from './apiCalls'
 import './App.css';
 import { Route, Switch } from 'react-router-dom';

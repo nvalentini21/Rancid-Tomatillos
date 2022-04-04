@@ -15,7 +15,7 @@ const Movies = ({movies}) => {
 
   return (
     <div className = 'movies-display'>
-      <h2>All Movies</h2>
+      <h2 className ='movie-header'>All Movies</h2>
       <div className='movies-container'>
         {movieCards}
       </div>
