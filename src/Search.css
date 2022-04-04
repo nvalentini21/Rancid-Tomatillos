@@ -7,15 +7,6 @@
   color: white;
 }
 
-label {
-  margin-right: 10px;
-}
-
-input {
-  margin-left: 10px;
-  width: 200px;
-  height: 20px;
-}
 
 .search-form {
   padding: 30px;
@@ -25,6 +16,16 @@ input {
   border-top: solid;
   border-bottom: solid;
   border-color: gray;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  margin-left: 10px;
+  width: 200px;
+  height: 20px;
 }
 
 .movies-search-container {

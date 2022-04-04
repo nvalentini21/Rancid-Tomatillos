@@ -22,11 +22,11 @@ class Search extends Component {
   }
 
   handleChange = event => {
-      this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
+    this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
   }
 
   clearInputs = event => {
-       this.setState({search:''})
+    this.setState({search:''})
   }
 
   searchMovie = event => {

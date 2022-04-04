@@ -12,6 +12,4 @@ const Card = ({poster, id}) => {
   )
 }
 
-
-
 export default Card;
