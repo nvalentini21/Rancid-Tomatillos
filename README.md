@@ -69,6 +69,7 @@ The current project represents the completion of the a Turing School of Software
 
 In the future, I plan to:
 
+* Deploy this project via Heroku or surge for more accesible viewing.
 * Add icons for the overall app title, and individual movie ratings.
 * Add a loading page/icon to be shown while network requests are taking place.
 * Add a trailer link to the single movie pages that can be viewed.
