@@ -7,10 +7,10 @@ const Nav= ({movie, showAllMovies}) => {
     <nav className='navigation'>
       <h1 className='title'>RANCID TOMATILLOS</h1>
       <NavLink to='/'>
-        <button className='all-movies-btn'>All Movies</button>
+        <button className=' all-btn all-movies-btn'>All Movies</button>
       </NavLink>
       <NavLink to='/search'>
-      <button className='all-movies-btn'>Search Movies</button>
+      <button className='all-movies-btn search-btn'>Search Movies</button>
       </NavLink>
     </nav>
   )
