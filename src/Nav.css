@@ -11,6 +11,7 @@
 
 .title {
   font-size: 40px;
+  font-weight: bolder;
   color: red;
   margin-right: 30px;
   margin: 20px;
@@ -21,17 +22,26 @@ text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px
 }
 
 .all-movies-btn {
+  font-weight: lighter;
+  font-size: small;
   margin-left: 20px;
+  margin-right: 20px;
   background-color: #1A085E;
-  height: 50px;
-  width: 200px;
+  height: 40px;
+  width: 100%;
   color: white;
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.44);
   border-radius: 5px;
   text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
 
+.all-movies-btn:hover{
+  cursor: pointer;
 }
 
 .nav-buttons {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
   padding: 20px;
 }
