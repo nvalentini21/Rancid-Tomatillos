@@ -5,8 +5,8 @@ describe('Search Page', () => {
     .intercept('GET','https://rancid-tomatillos.herokuapp.com/api/v2/movies',
     {"movies": [
       {id: 694919, title: "Money Plane", poster_path: "https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg", backdrop_path: "https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg", release_date: "2019-12-04", overview: "Some overview", average_rating: 6 },
-      {id: 2, title: "Test Movie 2", poster_path: "someURL2", backdrop_path: "someURL2", release_date: "2019-12-04", overview: "Some overview", average_rating: 7 },
-      {id: 3, title: "Test Movie 3", poster_path: "someURL3", backdrop_path: "someURL3", release_date: "2019-12-04", overview: "Some overview", average_rating: 8 },
+      {id: 337401, title: "Mulan", poster_path: "https://image.tmdb.org/t/p/original//aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg", backdrop_path: "https://image.tmdb.org/t/p/original//zzWGRw277MNoCs3zhyG3YmYQsXv.jpg", release_date: "2019-12-04", overview: "Some overview", average_rating: 7 },
+      {id: 718444, title: "Rogue", poster_path: "https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg", backdrop_path: "https://image.tmdb.org/t/p/original//x4UkhIQuHIJyeeOTdcbZ3t3gBSa.jpg", release_date: "2019-12-04", overview: "Some overview", average_rating: 8 },
       ]}
     )
   })
