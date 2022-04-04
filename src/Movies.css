@@ -4,7 +4,6 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   background-color: black;
-  overflow-x: scroll;
 }
 
 .movies-display {

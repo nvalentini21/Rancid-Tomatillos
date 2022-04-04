@@ -3,6 +3,7 @@ import Movies from './Movies';
 import Movie from './Movie';
 import Nav from './Nav';
 import NoMatch from './NoMatch';
+import Search from './Search';
 import movieData from './data';
 import fetchCalls from './apiCalls'
 import './App.css';
@@ -31,10 +32,13 @@ componentDidMount = () => {
         />
         <Switch>
           <Route exact path="/"
-            render={() => <Movies movies={this.state.movies} setSingleMovie={this.setSingleMovie}/> }
+            render={() => <Movies movies={this.state.movies}/> }
           />
           <Route exact path="/movies/:id"
             render={({match}) => <Movie id={match.params.id} />}
+          />
+          <Route exact path="/search"
+            render={() => <Search />}
           />
           <Route>
             <NoMatch />
