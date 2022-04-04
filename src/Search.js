@@ -9,20 +9,10 @@ class Search extends Component {
     this.state = {
       allMovies: props.allMovies,
       filteredMovies:[],
+      movieCards: null,
       search: ''
     }
   }
-
-// componentDidMount = () => {
-//   fetchCalls.fetchData(`movies`)
-//   .then(data => {
-//     console.log(data.movies)
-//       this.setState({allMovies: data.movies})
-//   })
-// }
-
-componentDidUpdate = () => {
-}
 
 handleChange = event => {
    this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
@@ -37,8 +27,24 @@ handleChange = event => {
    const searchedMovies = this.state.allMovies.filter(movie => {
      return movie.title.toLowerCase().includes(this.state.search.toLowerCase())
    })
-   this.setState({filteredMovies:searchedMovies})
-   console.log(this.state.filteredMovies)
+   this.setState({filteredMovies:searchedMovies}, this.getMovieCards)
+ }
+
+ getMovieCards = () => {
+   const movieCards = this.state.filteredMovies.map(movie => {
+     return (
+       <Card
+         id={movie.id}
+         key={movie.id}
+         poster={movie.poster_path}
+         backdrop={movie.backdrop_path}
+         rating={movie.average_rating}
+         release_date={movie.release_date}
+         title={movie.title}
+       />
+     )
+   })
+   this.setState({movieCards: movieCards})
  }
 
   render() {
@@ -55,6 +61,14 @@ handleChange = event => {
           />
         <button onSubmit={event => this.searchMovie(event)}>Search</button>
         </form>
+        {this.state.movieCards &&
+          <div className = 'movies-display'>
+          <h2></h2>
+          <div className='movies-container'>
+            {this.state.movieCards}
+          </div>
+        </div> }
+
       </div>
     )
   }
