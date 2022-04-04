@@ -4,21 +4,28 @@ import Card from './Card';
 import './Search.css'
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      allMovies: props.allMovies,
+      allMovies: [],
       filteredMovies:[],
       movieCards: null,
       search: ''
     }
   }
 
-handleChange = event => {
-   this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
- }
+  componentDidMount = () => {
+    fetchCalls.fetchData('movies')
+      .then(data => {
+        this.setState({allMovies: data.movies})
+      })
+    }
 
- clearInputs = (event) => {
+handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value }, this.searchMovie(event));
+}
+
+ clearInputs = () => {
    this.setState({search:''})
  }
 
@@ -48,6 +55,7 @@ handleChange = event => {
  }
 
   render() {
+    console.log(this.state.movieCards)
     return (
       <div className="search-page">
         <form className="search-form">
@@ -61,9 +69,9 @@ handleChange = event => {
           />
         </form>
         {this.state.movieCards &&
-          <div className = 'movies-display'>
+          <div className = 'movies-search-display'>
           <h2></h2>
-          <div className='movies-container'>
+          <div className='movies-search-container'>
             {this.state.movieCards}
           </div>
         </div> }

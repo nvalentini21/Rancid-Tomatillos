@@ -1,12 +1,17 @@
+html {
+  background-color: black;
+}
 
 .App {
   background-color: black;
   color: white;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
-  height: 75px;
+  height: 7vw;
   background: linear-gradient(90deg, rgba(5,2,56,1) 0%, rgba(136,0,255,1) 49%, rgba(24,9,121,1) 78%);
   display: flex;
   padding-left: 40px;
