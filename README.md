@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Rancid Tomatillos #
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
 
-## Available Scripts
+Travel Tracker is an application  that tracks and records past, present, current, and pending trips around the world. The application can also be used to make trip requests.
 
-In the project directory, you can run:
+---
+## Links
+* [GitHub Repository](https://github.com/nvalentini21/Rancid-Tomatillos)
+---
+## Contributors
+* [Nicole Valentini](https://github.com/nvalentini21)
+---
+## Tech Used
+* React
+* Cypress
+* Javascript
+* CSS
+* HTML
+* Object Oriented Programming
+* Git/GitHub
+* Webpack
+* Mocha/Chai
 
-### `npm start`
+---
+## Installation/Set-Up
+* Click this [link](https://github.com/nvalentini21/Rancid-Tomatillos) to view the gitHub repository.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* To view code on the text editor of your choice (I used atom to construct this code):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Clone [this repository](https://github.com/nvalentini21/Rancid-Tomatillos) in your terminal by entering `git clone https://github.com/nvalentini21/Travel-Tracker` and then `cd rancid-tomatillos` to move into the directory. Next, run `npm install` to download all necessary packages and dependencies. Finally, run `npm start` and copy and paste the URL provided next to the "Your Project is Running at: " statement.
 
-### `npm test`
+---
+## How To Use Rancid Tomatillos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Immediately upon running `npm start`, a react application should open in your web browser, and load the movies dashboard. The dashboard contains all movies included in the api database. Users can click on a movie poster, and be directed to a new page that shows the movie's specific details.
 
-### `npm run build`
+![AllMovies](https://media.giphy.com/media/iaAXqvcDpID47YC6oU/giphy.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The individual movie page contains the following movie information: Movie title, runtime, release date, genres, overview, average rating, revenue, and budget.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Users can navigate back to the main page by clicking on the 'All Movies' button in the navigation section at the top right hand corner.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+### Search Movies :
 
-### `npm run eject`
+A user is able to search for a specific movie by doing the following:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* click the "Search Movies" button in the navigation section at the top right hand corner of the screen.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* the user will be directed to a form, in which they can begin to type the movie title into the input. Movies that contain the input will automatically populate in the field below.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![SearchMovies](https://media.giphy.com/media/MYTKALcVSzPlnLkSEI/giphy.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Fetching and displaying data from an API/local server in a visually appealing way.
+* Utilizing react router to create multiple pages/urls that allow the user to use the browser back and forward buttons.
+* Using a form/input field to filter through a database and display matches based on the input value, in real time.
+* Error handling for server errors, so that the user can easily understand when a network request has failed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+## Future Additions
 
-### Code Splitting
+The current project represents the completion of the a Turing School of Software and Design Module 3 solo project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+In the future, I plan to:
 
-### Analyzing the Bundle Size
+* Add icons for the overall app title, and individual movie ratings.
+* Add a loading page/icon to be shown while network requests are taking place.
+* Add a trailer link to the single movie pages that can be viewed.
+* Add a randomized video section at the top of the dashboard, that will highlight a trailer from a random movie each time the page is loaded.
+* Continue to add additional layers of error handling - instead of a window alert, I'd like to make some of the messages appear on the page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+## Credits
+* [Turing School of Software and Design*](turing.edu)
+* My project manager, Robbie Jaeger [@robbiejaeger](https://github.com/robbiejaeger)
