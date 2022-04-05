@@ -3,7 +3,7 @@
 
 ## Abstract
 
-Rancid Tomatillos is an application that allows a user to view movie data via an easy to use, visually appealing interface.
+Rancid Tomatillos is an application that allows users to view movie data via an easy to use, visually appealing interface.
 
 ---
 ## Links
