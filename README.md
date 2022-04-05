@@ -27,7 +27,7 @@ Rancid Tomatillos is an application that allows a user to view movie data via an
 ---
 ## Installation/Set-Up
 
-* To view the deployed project, click on this [project-link](unused-spark.surge.sh)
+* To view the deployed project, copy and paste this url into your browser and press enter: `unused-spark.surge.sh`
 
 * Click this [link](https://github.com/nvalentini21/Rancid-Tomatillos) to view the gitHub repository.
 
@@ -75,7 +75,7 @@ The current project represents the completion of the a Turing School of Software
 
 In the future, I plan to:
 
-* Deploy this project via Heroku or surge for more accesible viewing.
+* Refactor CSS for better responsiveness, and less fluidity. 
 * Add icons for the overall app title, and individual movie ratings.
 * Add a loading page/icon to be shown while network requests are taking place.
 * Add a trailer link to the single movie pages that can be viewed.
