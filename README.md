@@ -40,6 +40,8 @@ Immediately upon running `npm start`, a react application should open in your we
 
 The individual movie page contains the following movie information: Movie title, runtime, release date, genres, overview, average rating, revenue, and budget.
 
+<img width="1141" alt="Screen Shot 2022-04-04 at 6 13 20 PM" src="https://user-images.githubusercontent.com/92831895/161653832-5c2fbc4c-c2f7-4a92-9454-802a5a7de16d.png">
+
 * Users can navigate back to the main page by clicking on the 'All Movies' button in the navigation section at the top right hand corner.
 
 ---
