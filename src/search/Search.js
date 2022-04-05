@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import fetchCalls from './apiCalls'
-import Card from './Card';
+import fetchCalls from '../common/apiCalls'
+import Card from '../common/Card';
 import './Search.css'
 
 class Search extends Component {

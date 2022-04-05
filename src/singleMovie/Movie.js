@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fetchCalls from './apiCalls'
+import fetchCalls from '../common/apiCalls'
 import './Movie.css'
 
 class Movie extends Component {
