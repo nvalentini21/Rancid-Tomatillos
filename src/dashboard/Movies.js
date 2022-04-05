@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../common/Card';
 import './Movies.css';
 
 const Movies = ({movies}) => {

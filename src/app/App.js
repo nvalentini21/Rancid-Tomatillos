@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Movies from './Movies';
-import Movie from './Movie';
-import Nav from './Nav';
-import NoMatch from './NoMatch';
-import Search from './Search';
-import fetchCalls from './apiCalls'
+import Movies from '../dashboard/Movies';
+import Movie from '../singleMovie/Movie';
+import Nav from '../dashboard/Nav';
+import NoMatch from '../common/NoMatch';
+import Search from '../search/Search';
+import fetchCalls from '../common/apiCalls'
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
