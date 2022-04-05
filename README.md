@@ -36,7 +36,7 @@ Travel Tracker is an application  that tracks and records past, present, current
 
 Immediately upon running `npm start`, a react application should open in your web browser, and load the movies dashboard. The dashboard contains all movies included in the api database. Users can click on a movie poster, and be directed to a new page that shows the movie's specific details.
 
-![AllMovies](https://media.giphy.com/media/MYTKALcVSzPlnLkSEI/giphy.gif)
+![AllMovies](https://media.giphy.com/media/iaAXqvcDpID47YC6oU/giphy.gif)
 
 The individual movie page contains the following movie information: Movie title, runtime, release date, genres, overview, average rating, revenue, and budget.
 
