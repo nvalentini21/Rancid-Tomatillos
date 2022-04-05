@@ -1,9 +1,9 @@
-# Rancid Tomatillos #
+# 🍅Rancid Tomatillos🍅 #
 ---
 
 ## Abstract
 
-Travel Tracker is an application  that tracks and records past, present, current, and pending trips around the world. The application can also be used to make trip requests.
+Rancid Tomatillos is an application that allows a user to view movie data via an easy to use, visually appealing interface.
 
 ---
 ## Links
@@ -22,9 +22,13 @@ Travel Tracker is an application  that tracks and records past, present, current
 * Git/GitHub
 * Webpack
 * Mocha/Chai
+* Surge.sh
 
 ---
 ## Installation/Set-Up
+
+* To view the deployed project, click on this [project-link](unused-spark.surge.sh)
+
 * Click this [link](https://github.com/nvalentini21/Rancid-Tomatillos) to view the gitHub repository.
 
 * To view code on the text editor of your choice (I used atom to construct this code):
